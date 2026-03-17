@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Cake 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="cakePage">
+
+<!-- Bouton Back -->
+<button class="backTop" onclick="location.href='yes.html'">⬅ Back</button>
+
+<h1 class="cakeTitle">Joyeux Anniversaire 🎂🎉 !</h1>
+
+<div class="cakeContainer">
+    <div class="cake">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="candles">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- Ballons animés -->
+<div class="balloon balloon1">🎈</div>
+<div class="balloon balloon2">🎈</div>
+<div class="balloon balloon3">🎈</div>
+
+<!-- Cadeaux animés -->
+<div class="giftAnim gift1">🎁</div>
+<div class="giftAnim gift2">🎁</div>
+
+<!-- Étoiles scintillantes -->
+<div class="star star1">⭐</div>
+<div class="star star2">⭐</div>
+<div class="star star3">⭐</div>
+<div class="star star4">⭐</div>
+<div class="star star5">⭐</div>
+
+<!-- Bouton souffler les bougies -->
+<button class="blowBtn" onclick="blowCandles()">Fais un uuuufff 🎉!</button>
+
+<!-- Conteneur pour les confettis -->
+<div class="confettiContainer"></div>
+
+<script>
+// Fonction pour souffler les bougies
+function blowCandles() {
+    const flames = document.querySelectorAll('.flame');
+    flames.forEach(f => {
+        f.style.animation = 'none';
+        f.style.opacity = '0';
+    });
+    createConfetti();
+}
+
+// Création des confettis
+function createConfetti() {
+    const confettiContainer = document.querySelector('.confettiContainer');
+    for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.backgroundColor = `hsl(${Math.random()*360}, 80%, 60%)`;
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confettiContainer.appendChild(confetti);
+    }
+}
+</script>
+
+</body>
+</html>

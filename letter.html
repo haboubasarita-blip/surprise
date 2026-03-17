@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Letter 💌</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body class="letterPage">
+
+  <!-- Bouton Back -->
+  <button class="backTop" onclick="location.href='yes.html'">⬅ Back</button>
+
+  <!-- Conteneur de la lettre -->
+  <div class="letterContainer">
+    <div class="letterPaper">
+      <h1 class="letterMessage">
+      Habibou, joyeux anniversaire boy ! 🎉 J’espère que ma surprise t’a plu. Inshallah cette année sera meilleure que l’année passée, et j’espère que tu réaliseras tous les projets et les choses que tu veux. Tu comptes vraiment beaucoup pour moi, tu es très cher à mon cœur ❤️. Je t’aime  💙.
+      </h1>
+
+      <div class="stickers">
+        🎂 ⭐ 💙 🎈 🧸 ✨
+      </div>
+    </div>
+  </div>
+
+  <!-- Ballons animés -->
+  <div class="balloon balloon1">🎈</div>
+  <div class="balloon balloon2">🎈</div>
+  <div class="balloon balloon3">🎈</div>
+
+  <!-- Cadeaux animés -->
+  <div class="giftAnim gift1">🎁</div>
+  <div class="giftAnim gift2">🎁</div>
+
+  <!-- Étoiles scintillantes -->
+  <div class="star star1">⭐</div>
+  <div class="star star2">⭐</div>
+  <div class="star star3">⭐</div>
+  <div class="star star4">⭐</div>
+  <div class="star star5">⭐</div>
+
+
+  <!-- Conteneur pour les confettis -->
+  <div class="confettiContainer"></div>
+
+  <!-- Script pour confettis -->
+  <script>
+    function createConfetti() {
+      const confettiContainer = document.querySelector('.confettiContainer');
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.backgroundColor = `hsl(${Math.random()*360}, 80%, 60%)`;
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confettiContainer.appendChild(confetti);
+      }
+    }
+    window.onload = createConfetti;
+  </script>
+
+</body>
+
+</html>
