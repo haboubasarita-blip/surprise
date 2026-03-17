@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Gift Flowers 🎁🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== PAGE ===== */
+
+body{
+margin:0;
+height:100vh;
+font-family:'Poppins',sans-serif;
+}
+
+.giftPage{
+width:100%;
+height:100vh;
+display:flex;
+background:#bde0fe;
+color:#1565c0;
+position:relative;
+overflow:hidden;
+}
+
+/* ===== GUIRLANDE ===== */
+
+.banner{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:10px 20px;
+}
+
+.flag{
+width:35px;
+height:45px;
+clip-path:polygon(0 0,100% 0,50% 100%);
+animation:swing 2s ease-in-out infinite;
+}
+
+.flag:nth-child(1){background:#ff6b6b;}
+.flag:nth-child(2){background:#ffd166;}
+.flag:nth-child(3){background:#06d6a0;}
+.flag:nth-child(4){background:#4cc9f0;}
+.flag:nth-child(5){background:#f72585;}
+.flag:nth-child(6){background:#ff9f1c;}
+.flag:nth-child(7){background:#2ec4b6;}
+.flag:nth-child(8){background:#ff6b6b;}
+.flag:nth-child(9){background:#ffd166;}
+.flag:nth-child(10){background:#06d6a0;}
+.flag:nth-child(11){background:#4cc9f0;}
+.flag:nth-child(12){background:#f72585;}
+
+@keyframes swing{
+0%{transform:rotate(0deg);}
+50%{transform:rotate(6deg);}
+100%{transform:rotate(0deg);}
+}
+
+/* ===== BALLONS ===== */
+
+.balloon{
+position:absolute;
+bottom:-120px;
+width:40px;
+height:50px;
+border-radius:50%;
+animation:floatBalloon 8s linear infinite;
+}
+
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:40px;
+background:#555;
+top:50px;
+left:50%;
+transform:translateX(-50%);
+}
+
+/* couleurs */
+
+.b1{background:#ff6b6b; left:40px; animation-delay:0s;}
+.b2{background:#ffd166; left:90px; animation-delay:2s;}
+.b3{background:#06d6a0; right:40px; animation-delay:1s;}
+.b4{background:#4cc9f0; right:90px; animation-delay:3s;}
+
+@keyframes floatBalloon{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+/* ===== BACK BUTTON ===== */
+
+.backTop{
+position:absolute;
+top:70px;
+left:30px;
+background:#1976d2;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.backTop:hover{
+transform:scale(1.1);
+}
+
+/* ===== CONTENU ===== */
+
+.giftContainer{
+display:flex;
+width:100%;
+height:100%;
+}
+
+.giftText{
+flex:1;
+padding:120px 50px 50px 80px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.giftText h1{
+font-size:60px;
+font-family:'Pacifico',cursive;
+margin-bottom:20px;
+}
+
+.giftText p{
+font-size:24px;
+line-height:1.5;
+max-width:500px;
+}
+
+.giftImage{
+flex:1;
+background:url('images/flowers.png') no-repeat center center;
+background-size:cover;
+border-left:2px solid rgba(0,0,0,0.1);
+}
+
+</style>
+</head>
+
+<body class="giftPage">
+
+<!-- 🎉 Guirlande -->
+<div class="banner">
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+<div class="flag"></div>
+</div>
+
+<!-- 🎈 Ballons -->
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+
+<button class="backTop" onclick="location.href='yes.html'">⬅ Back</button>
+
+<div class="giftContainer">
+
+<div class="giftText">
+
+<h1>Ces fleurs sont pour toi 🌸</h1>
+
+<p>
+Tu as toujours été là quand j’avais besoin de toi 🌸.
+Je suis vraiment désolé pour ce qui s’est passé avant 🙏.
+Tu as été l’une des plus belles choses qui soient arrivées dans ma vie 💙✨
+</p>
+
+</div>
+
+<div class="giftImage"></div>
+
+</div>
+
+</body>
+</html>
